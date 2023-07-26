@@ -29,5 +29,6 @@ export const getAllCourses = async() => {
  
   return {
     data: gqlResponse?.allCourses?.edges || [],
+    totalCount: gqlResponse?.allCourses?.totalCount || 0,
   }; 
 }

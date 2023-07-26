@@ -7,6 +7,7 @@ export default async function Home() {
   
   return (
     <main>
+      <p>{courses?.totalCount} Courses</p>
       <div>
       {
         courses?.data?.map((course: any, index: number) =>(
