@@ -9,19 +9,19 @@ export default async function Home() {
   return (
     <main>
       <p>{courses?.totalCount} Courses</p>
-      <div>
+      <div className='flex p-1'>
       {
         courses?.data?.map((course: any, index: number) =>(
           <Link
-            href={`/${course?.node?.id}`}>
-              <div>
-                <h2>{ course?.node?.name }</h2>
+            href={`/${course?.node?.slug}`}>
+              <div className='m-2'>
                 <Image
                   src={course?.node?.cover?.src}
                   alt="Picture of the author"
-                  width={500} 
-                  height={500} 
+                  width={300} 
+                  height={300} 
                 />
+                <h2>{ course?.node?.name }</h2>
               </div>
           </Link>
         ))

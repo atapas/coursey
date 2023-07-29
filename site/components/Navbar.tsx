@@ -26,7 +26,7 @@ const Navbar = () => {
             href="https://youtube.com/@tapasadhikary"
             className="block mt-4 lg:inline-block lg:mt-0 text-blue-200 hover:text-white mr-4"
           >
-            Join tapaScript
+            My Videos
           </a>
           <a
             href="https://blog.greenroots.info"
@@ -35,7 +35,7 @@ const Navbar = () => {
             My Blog
           </a>
           <a
-            href="https://tapasadhikary.com"
+            href="https://tapasadhikary.com/talks"
             className="block mt-4 lg:inline-block lg:mt-0 text-blue-200 hover:text-white"
           >
             My Talks
@@ -43,10 +43,10 @@ const Navbar = () => {
         </div>
         <div>
           <a
-            href="https://twitter.com/tapasadhikary"
+            href="https://youtube.com/@tapasadhikary"
             className="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-blue-500 hover:bg-white mt-4 lg:mt-0"
           >
-            Follow on X
+            Join tapaScript
           </a>
         </div>
       </div>

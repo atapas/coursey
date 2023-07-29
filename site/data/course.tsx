@@ -10,15 +10,11 @@ export const getAllCourses = async() => {
           totalCount
           edges {
             node {
-              rating
-              price
               name
               id
+              slug
               cover {
                 src
-              }
-              description {
-                json
               }
             }
           }
@@ -30,5 +26,52 @@ export const getAllCourses = async() => {
   return {
     data: gqlResponse?.allCourses?.edges || [],
     totalCount: gqlResponse?.allCourses?.totalCount || 0,
+  }; 
+}
+
+export const getCourse = async(slug: String) => {
+  const client = getClient();
+  const gqlResponse: any = await client.request(
+    gql`
+      query allCourses($slug: String) {
+        allCourses(where: { slug: { eq: $slug } }) {
+          edges {
+            node {
+              comments {
+                ... on Comments {
+                  id
+                  email
+                  name
+                  rating
+                  data{
+                    json
+                  }
+                }
+              }
+              cover {
+                src
+              }
+              description {
+                json
+              }
+              duration
+              id
+              link
+              name
+              price
+              publishedOn
+              rating
+              type
+              updatedOn
+            }
+          }
+        }
+      }
+    `,
+    { slug: slug }
+  );
+ 
+  return {
+    data: gqlResponse?.allCourses?.edges?.[0]?.node || {},
   }; 
 }
