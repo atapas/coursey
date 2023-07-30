@@ -23,7 +23,7 @@ export default async function CoursePage({params}: {
       </div>
       <div>
         <div><AddComments addComment={addComment}/></div>
-        <h3>Comments</h3>
+        <ul>Comments</ul>
         {
           comments.length > 0 ? (
             comments.map((comment: any) => (

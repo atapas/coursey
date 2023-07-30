@@ -13,6 +13,7 @@ export const getAllCourses = async() => {
               name
               id
               slug
+              price
               cover {
                 src
               }
