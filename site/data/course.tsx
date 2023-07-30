@@ -43,6 +43,7 @@ export const getCourse = async(slug: String) => {
                   email
                   name
                   rating
+                  commentedOn
                   data{
                     json
                   }
