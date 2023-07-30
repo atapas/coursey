@@ -1,8 +1,8 @@
 import Image from 'next/image';
 import { RichTextRenderer } from "@caisy/rich-text-react-renderer";
 import { getCourse } from '@/data/course';
-import AddComments from '@/components/AddComments';
-import { addCommentToCourse } from '@/app/actions/add-comment';
+import AddComments from '@/app/components/AddComments';
+import { addComment } from '@/app/actions/add-comment';
 
 export default async function CoursePage({params}: {
   params: {id: string}
@@ -22,7 +22,7 @@ export default async function CoursePage({params}: {
         <p>Rating: { course?.data?.rating }</p>
       </div>
       <div>
-        <div><AddComments addComment={addCommentToCourse}/></div>
+        <div><AddComments addComment={addComment}/></div>
         <h3>Comments</h3>
         {
           comments.length > 0 ? (

@@ -1,10 +1,9 @@
 'use server'
 
 import { revalidatePath } from 'next/cache'
+import { addCommentToCourse } from '@/data/course'
 
-
-export async function addCommentToCourse(data: any) {
-  console.log(data);
-  //await courses.create(data);
+export async function addComment(data: any) {
+  await addCommentToCourse(data);
   revalidatePath('/');
 }

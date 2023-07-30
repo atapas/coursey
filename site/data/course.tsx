@@ -76,3 +76,7 @@ export const getCourse = async(slug: String) => {
     data: gqlResponse?.allCourses?.edges?.[0]?.node || {},
   }; 
 }
+
+export const addCommentToCourse = async(commentObj: any) => {
+  console.log(commentObj);
+}
