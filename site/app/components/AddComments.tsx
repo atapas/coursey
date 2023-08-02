@@ -43,25 +43,33 @@ export default function AddComments(
     }
   }
   return(
-    <>
+    <div className="flex flex-col">
       <div>
         {status !== 'unknown' && getStatus(status)}
       </div>
-      <form action={handleAdd}>
-        <label htmlFor="name-id">Your Name</label>
-        <input name="name" id="name-id" type="text" placeholder="Enter Name" onChange={handleChange}/>
+      <form className="flex flex-col w-4/5" action={handleAdd}>
+        <div className="flex">
+          <label htmlFor="name-id" className="mr-1 font-semibold text-xl">Name</label>
+          <input  className="rounded border p-1" name="name" id="name-id" type="text" placeholder="Enter Name" onChange={handleChange}/>
+        </div>
 
-        <label htmlFor="email-id">Your Email</label>
-        <input name="email" id="email-id" type="email" placeholder="Enter Email Id" onChange={handleChange}/>
+        <div className="flex mt-2">
+          <label className="mr-1 font-semibold text-xl" htmlFor="email-id">Email</label>
+          <input className="rounded border p-1" name="email" id="email-id" type="email" placeholder="Enter Email Id" onChange={handleChange}/>
+        </div>
 
-        <label htmlFor="rating-id">Your Rating</label>
-        <input name="rating" id="rating-id" type="number" onChange={handleChange}/>
+        <div className="flex mt-2">
+          <label className="mr-1 font-semibold text-xl" htmlFor="rating-id">Rating</label>
+          <input className="rounded border p-1" name="rating" id="rating-id" type="number" onChange={handleChange}/>
+        </div>
 
-        <label htmlFor="comment-id">Your Comment</label>
-        <textarea name="data" id="comment-id" placeholder="Enter Comment" onChange={handleChange}/>
+        <div className="flex flex-col mt-2">
+          <label className="mr-1 font-semibold text-xl" htmlFor="comment-id">Comment</label>
+          <textarea className="rounded border p-1" name="data" id="comment-id" placeholder="Enter Comment" onChange={handleChange}/>
+        </div>
 
-        <button type="submit">Add</button>
+        <button className="bg-cyan-500 w-20 p-1 rounded-lg text-white m-2" type="submit">Add</button>
       </form>
-    </>
+    </div>
   )
 }
