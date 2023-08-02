@@ -11,7 +11,6 @@ export default async function CoursePage({params}: {
   const course: any  = await getCourse(params?.id);
   const comments: any = course?.data?.comments;
   
-
   return(
     <div>
       <div>
@@ -22,7 +21,11 @@ export default async function CoursePage({params}: {
         <p>Rating: { course?.data?.rating }</p>
       </div>
       <div>
-        <div><AddComments addComment={addComment}/></div>
+        <div>
+          <AddComments 
+            addComment={addComment} 
+            course={course}/>
+        </div>
         <ul>Comments</ul>
         {
           comments.length > 0 ? (
