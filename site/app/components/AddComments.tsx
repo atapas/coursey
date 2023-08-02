@@ -23,8 +23,8 @@ export default function AddComments(
     });
   }
 
-  const handleAdd = () => {
-    const res = addComment(state, course);
+  const handleAdd = async () => {
+    const res = await addComment(state, course);
     if(!res){
       setStatus("fail");
     } else if(res.id) {
@@ -47,7 +47,7 @@ export default function AddComments(
       <div>
         {status !== 'unknown' && getStatus(status)}
       </div>
-      <form>
+      <form action={handleAdd}>
         <label htmlFor="name-id">Your Name</label>
         <input name="name" id="name-id" type="text" placeholder="Enter Name" onChange={handleChange}/>
 
@@ -60,7 +60,7 @@ export default function AddComments(
         <label htmlFor="comment-id">Your Comment</label>
         <textarea name="data" id="comment-id" placeholder="Enter Comment" onChange={handleChange}/>
 
-        <button onClick={handleAdd}>Add</button>
+        <button type="submit">Add</button>
       </form>
     </>
   )
