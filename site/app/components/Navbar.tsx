@@ -24,18 +24,21 @@ const Navbar = () => {
         <div className="text-sm lg:flex-grow">
           <a
             href="https://youtube.com/@tapasadhikary"
+            target="_blank"
             className="block mt-4 lg:inline-block lg:mt-0 text-blue-200 hover:text-white mr-4"
           >
             My Videos
           </a>
           <a
             href="https://blog.greenroots.info"
+            target="_blank"
             className="block mt-4 lg:inline-block lg:mt-0 text-blue-200 hover:text-white mr-4"
           >
             My Blog
           </a>
           <a
             href="https://tapasadhikary.com/talks"
+            target="_blank"
             className="block mt-4 lg:inline-block lg:mt-0 text-blue-200 hover:text-white"
           >
             My Talks
@@ -44,6 +47,7 @@ const Navbar = () => {
         <div>
           <a
             href="https://youtube.com/@tapasadhikary"
+            target="_blank"
             className="inline-block text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-blue-500 hover:bg-white mt-4 lg:mt-0"
           >
             Join tapaScript

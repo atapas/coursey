@@ -47,18 +47,30 @@ export default async function CoursePage({params}: {
             addComment={addComment} 
             course={course}/>
         </div>
-        <ul>Comments</ul>
-        {
-          comments.length > 0 ? (
-            comments.map((comment: any) => (
-              <li key={comment?.id}>
-                <div>{comment?.data?.json && <RichTextRenderer node={comment?.data?.json} />}
-                by {comment?.name}</div>
-                <p> Rated {comment?.rating} on {comment?.commentedOn}</p>
-              </li>
-            ))
-          ) : (<p>No Comments Yet! Add One.</p>)
-        }
+        <div className='mt-2'>
+          <ul className='text-xl mb-2'>{comments.length} Comments</ul>
+          <div className=' bg-gray-100 flex flex-wrap items-center justify-center'>
+          {
+            comments.length > 0 ? (
+              comments.map((comment: any) => (
+                <li className='m-2 bg-white max-w-xl rounded-2xl px-10 py-8 shadow-lg hover:shadow-2xl transition duration-500' key={comment?.id}>
+                  <p className="flex mt-2"> Rated {comment?.rating}</p>
+
+                  <div className="mt-4 text-md text-gray-600">{comment?.data?.json && <RichTextRenderer node={comment?.data?.json} />}</div>
+
+                  <div className="mt-4 flex items-center space-x-4 py-6">
+                    <div>
+                      <img className="w-12 h-12 rounded-full" src="https://xsgames.co/randomusers/avatar.php?g=male" alt="" />
+                    </div>
+                    <div className="text-sm font-semibold">{comment?.name} • <span className="font-normal"> {comment?.commentedOn} </span></div>
+                  </div>
+                  
+                </li>
+              ))
+            ) : (<p>No Comments Yet! Add One.</p>)
+          }
+          </div>
+        </div>
       </div>
     </div>
   )
