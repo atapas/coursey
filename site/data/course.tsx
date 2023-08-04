@@ -71,7 +71,6 @@ export const getCourse = async(slug: String) => {
               name
               price
               publishedOn
-              rating
               type
               updatedOn
             }

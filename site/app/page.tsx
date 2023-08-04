@@ -2,6 +2,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 import { getAllCourses } from '@/data/course';
+import Search from './components/Search';
 
 export default async function Home() {
   const courses: any = await getAllCourses();
@@ -9,7 +10,7 @@ export default async function Home() {
   return (
     <main>
       <div className='container mx-auto px-4'>
-        <p className='flex items-end justify-end m-1'>{courses?.totalCount} Courses</p>
+        <Search />
         <div className='flex items-center'>
         {
           courses?.data?.map((course: any, index: number) =>(
@@ -24,7 +25,7 @@ export default async function Home() {
                   />
                   <h2 className='text-center font-semibold'>{ course?.node?.name }</h2>
                   <p className="text-center"> 
-                    Price: ${course?.node?.price}
+                    Get it for {course?.node?.price === 0 ? 'Free' : `$${course?.node?.price}`}
                   </p>
                 </div>
             </Link>

@@ -11,6 +11,9 @@ export default async function CoursePage({params}: {
   
   const course: any  = await getCourse(params?.id);
   const comments: any = course?.data?.comments;
+
+  const cummulativeRating = comments.reduce((accumulator: number, comment: any) => accumulator + comment.rating, 0);
+  const avgRating = comments.length > 0 ? (cummulativeRating/comments.length).toFixed(2) : 0;
   
   return(
     <div className='p-2 flex flex-col justify-center'>
@@ -33,7 +36,7 @@ export default async function CoursePage({params}: {
           <span className='font-bold'>Duration</span>: { `${course?.data?.duration} minutes` } | 
         </p>
         <p className='mr-2'>
-          <span className='font-bold'>Rating</span>: { course?.data?.rating }
+          <span className='font-bold'>Rating</span>: {avgRating}
         </p>
       </div>
 

@@ -89,6 +89,20 @@ export default function AddComments({
             </div>
 
             <div className="md:w-4/5 mb-6">
+              <label htmlFor="rating-id"></label>
+              <input
+                className="appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
+                name="rating"
+                id="rating-id"
+                type="number"
+                min="1"
+                max="5"
+                placeholder="Enter a Rating"
+                onChange={handleChange}
+              />
+            </div>
+
+            <div className="md:w-4/5 mb-6">
               <label htmlFor="comment-id"></label>
               <textarea
                 className="appearance-none border-2 border-gray-200 rounded w-full py-2 px-4 text-gray-700 leading-tight focus:outline-none focus:bg-white focus:border-purple-500"
