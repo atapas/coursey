@@ -16,16 +16,13 @@ export default async function CoursePage({params}: {
     <div className='p-2 flex flex-col justify-center'>
       <div>
         <h2 className='text-4xl font-semibold mt-2 mb-2'>{ course?.data?.name}</h2>
-        <div className='text-xl mb-2'>
+        <div className='text-xl mb-2 p-2'>
           {course?.data?.description?.json 
           && <RichTextRenderer node={course?.data?.description?.json} />}
         </div>
-        <div className='border rounded-md border-gray-400 shadow-md'>
-          <YoutubeEmbed src={course?.data?.link} />
-        </div>
       </div>
 
-      <div className='flex mt-3 mb-3 text-lg'>
+      <div className='flex text-lg justify-center mb-2'>
         <p className='mr-2'>
           <span className='font-bold'>Price</span>: {course?.data?.price === 0 ? `Free` : `$${course?.data?.price}`} | 
         </p>
@@ -40,13 +37,13 @@ export default async function CoursePage({params}: {
         </p>
       </div>
 
+      <YoutubeEmbed src={course?.data?.link} />
+
       <div className='flex flex-col'>
-        <div className='bg-slate-100 border rounded-lg pl-2'>
-          <h2 className='text-2xl font-semibold mt-2 mb-2 pt-3 pb-3'>Add a Comment</h2>
-          <AddComments 
-            addComment={addComment} 
-            course={course}/>
-        </div>
+        <AddComments 
+          addComment={addComment} 
+          course={course}/>
+        
         <div className='mt-2'>
           <ul className='text-xl mb-2'>{comments.length} Comments</ul>
           <div className=' bg-gray-100 flex flex-wrap items-center justify-center'>
