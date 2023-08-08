@@ -13,7 +13,7 @@ export default async function CoursePage({params}: {
   const comments: any = course?.data?.comments;
 
   const cummulativeRating = comments.reduce((accumulator: number, comment: any) => accumulator + comment.rating, 0);
-  const avgRating = comments.length > 0 ? (cummulativeRating/comments.length).toFixed(2) : 0;
+  const avgRating = comments.length > 0 ? Math.ceil(cummulativeRating/comments.length) : 0;
   
   return(
     <div className='p-2 flex flex-col justify-center'>
