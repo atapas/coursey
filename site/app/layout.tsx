@@ -9,7 +9,7 @@ import Footer from '@/app/components/Footer';
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Coursey",
+  title: "Coursery",
   description: "Get all the courses bt tapaScript",
 };
 
