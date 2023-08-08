@@ -25,22 +25,24 @@ export default async function CoursePage({params}: {
         </div>
       </div>
 
-      <div className='flex text-lg justify-center mb-2'>
-        <p className='mr-2'>
-          <span className='font-bold'>Price</span>: {course?.data?.price === 0 ? `Free` : `$${course?.data?.price}`} | 
-        </p>
-        <p className='mr-2'>
-          <span className='font-bold'>Last updated on</span>: { course?.data?.updatedOn } | 
-        </p>
-        <p className='mr-2'>
-          <span className='font-bold'>Duration</span>: { `${course?.data?.duration} minutes` } | 
-        </p>
-        <p className='mr-2'>
-          <span className='font-bold'>Rating</span>: {avgRating}
-        </p>
-      </div>
-
       <YoutubeEmbed src={course?.data?.link} />
+
+      <div className='flex flex-col flex-wrap items-center mb-2'>
+        <div>
+          <p>
+           {avgRating === 0 ? 'No Rating Available' : avgRating}
+          </p>
+        </div>
+        
+        <div className='flex'>
+          <p className='mr-5'>
+            {course?.data?.price === 0 ? `Free` : `$${course?.data?.price}`}
+          </p>
+          <p>
+            { `${course?.data?.duration} minutes` }
+          </p>
+        </div>
+      </div>
 
       <div className='flex flex-col'>
         <AddComments 
