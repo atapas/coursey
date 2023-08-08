@@ -16,6 +16,7 @@ export default async function Home() {
         {
           courses?.data?.map((course: any, index: number) =>(
             <Link
+              key={course?.node?.id}
               href={`/${course?.node?.slug}`}
               className='md:flex md:flex-col md:mr-8 w-full md:w-[calc(50%-1rem)] lg:w-[calc(25%-1rem)] even:mr-0 lg:even:mr-8 mb-8 h-auto border-solid border-2 border-gray-300 rounded'>
                 <div>
@@ -28,7 +29,6 @@ export default async function Home() {
                     className='w-full h-auto' 
                   />
                   <h2 className='text-center font-semibold'>{ course?.node?.name }</h2>
-                  
                 </div>
             </Link>
           ))
