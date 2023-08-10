@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 
 export default function AddComments({
   addComment,
@@ -56,9 +57,20 @@ export default function AddComments({
   return (
     <div className="bg-slate-100 border rounded-lg pl-2">
       <h2 
-        className="text-2xl font-semibold mt-2 mb-3 pt-3 pb-3 cursor-pointer"
+        className="cursor flex text-2xl font-semibold mt-2 mb-3 pt-3 pb-3 cursor-pointer"
         onClick={() => setShowForm(!showForm)}>
-        {showForm ? '↓' : '→'} Add a Comment
+        {
+          showForm ? 
+          (<Image 
+            src="./expand.svg" 
+            alt="expand" 
+            height={30} 
+            width={30} />) : (
+            <Image 
+              src="./chevron.svg" 
+              alt="chevron" 
+              height={30} 
+              width={30} />)} <p>Add a Comment</p>
       </h2>
       <div className="flex flex-col">
         <div>{status !== "unknown" && getStatus(status)}</div>
