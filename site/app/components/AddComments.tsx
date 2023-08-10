@@ -42,8 +42,8 @@ export default function AddComments({
     switch (status) {
       case "success":
         return (
-          <p>
-            Thanks for that! We will moderate and publish your feedback in a
+          <p className="p-2 m-2 text-center text-green-700 text-lg">
+            ✅ Thanks for that! We will moderate and publish your feedback in a
             while.
           </p>
         );
@@ -95,6 +95,7 @@ export default function AddComments({
                 name="rating"
                 id="rating-id"
                 type="number"
+                defaultValue="5"
                 min="1"
                 max="5"
                 placeholder="Enter a Rating"
