@@ -28,7 +28,10 @@ export default async function Home() {
                     height={300}
                     className='w-full h-auto' 
                   />
-                  <h2 className='text-center font-semibold'>{ course?.node?.name }</h2>
+                  <div className='p-2'>
+                    <p className='text-sm bg-gray-100 border border-gray-500 rounded-lg p-1 mb-1 font-semibold w-max'>{ course ?.node?.category }</p>
+                    <h2 className='text-xl'>{ course?.node?.name }</h2>
+                  </div>
                 </div>
             </Link>
           ))

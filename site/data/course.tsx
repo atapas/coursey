@@ -17,6 +17,7 @@ export const getAllCourses = async() => {
               name
               id
               slug
+              category
               price
               cover {
                 src
@@ -69,6 +70,7 @@ export const getCourse = async(slug: String) => {
               id
               link
               name
+              category
               price
               publishedOn
               type
