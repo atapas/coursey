@@ -4,6 +4,11 @@ import { getCourse } from '@/data/course';
 import AddComments from '@/app/components/AddComments';
 import { addComment } from '@/app/actions/add-comment';
 import YoutubeEmbed from '@/app/components/YouTubeEmbed';
+import Rating from '../components/Rating';
+
+import { BsFillClockFill } from 'react-icons/bs';
+import {IoPricetags} from 'react-icons/io5'
+
 
 export default async function CoursePage({params}: {
   params: {id: string}
@@ -29,18 +34,18 @@ export default async function CoursePage({params}: {
 
       <div className='flex flex-col flex-wrap items-center mb-2'>
         <div>
-          <p>
-           {avgRating === 0 ? 'No Rating Available' : avgRating}
-          </p>
+           {avgRating === 0 ? 'No Rating Available' : <Rating count={avgRating}/>}
         </div>
         
         <div className='flex'>
-          <p className='mr-5'>
-            {course?.data?.price === 0 ? `Free` : `$${course?.data?.price}`}
-          </p>
-          <p>
-            { `${course?.data?.duration} minutes` }
-          </p>
+          <div className=' flex mr-7 p-1'>
+            <IoPricetags size={24}/> 
+            <p className='text-lg ml-1'>Get it for <strong>{course?.data?.price === 0 ? `Free` : `$${course?.data?.price}`}</strong></p>
+          </div>
+          <div className='flex p-1'>
+            <BsFillClockFill size={24}/> 
+            <p className='text-lg ml-1'>{ `${course?.data?.duration} minutes` }</p>
+          </div>
         </div>
       </div>
 
