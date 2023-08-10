@@ -8,6 +8,7 @@ import Rating from '../components/Rating';
 
 import { BsFillClockFill } from 'react-icons/bs';
 import {IoPricetags} from 'react-icons/io5'
+import Link from 'next/link';
 
 
 export default async function CoursePage({params}: {
@@ -40,7 +41,13 @@ export default async function CoursePage({params}: {
         <div className='flex'>
           <div className=' flex mr-7 p-1'>
             <IoPricetags size={24}/> 
-            <p className='text-lg ml-1'>Get it for <strong>{course?.data?.price === 0 ? `Free` : `$${course?.data?.price}`}</strong></p>
+            <p className='text-lg ml-1'>
+              <Link
+                href="https://paypal.me/greenrootsinfo"
+                target='_blank'>
+                Get it for <strong>{course?.data?.price === 0 ? `Free` : `$${course?.data?.price}`}</strong>
+              </Link>
+            </p>
           </div>
           <div className='flex p-1'>
             <BsFillClockFill size={24}/> 
