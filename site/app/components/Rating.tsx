@@ -7,8 +7,8 @@ function Rating({count} : {count: number}) {
   return(
     <div className='flex mb-2'>
       {
-        stars.map((star) => (
-          <div className='mr-1'>{star}</div>
+        stars.map((star, index) => (
+          <div key={`rating-${index}-comp`} className='mr-1'>{star}</div>
         ))
       }
     </div>
