@@ -61,9 +61,9 @@ export default async function CoursePage({params}: {
           addComment={addComment} 
           course={course}/>
         
-        <div className='mt-2'>
+        <div className='mt-2 mb-2'>
           <ul className='text-xl mb-2'>{comments.length} Comments</ul>
-          <div className=' bg-gray-100 flex flex-wrap items-center justify-center'>
+          <div className=' bg-gray-100 mb-6 flex flex-wrap'>
           {
             comments.length > 0 ? (
               comments.map((comment: any) => (
