@@ -35,7 +35,7 @@ export default async function CoursePage({params}: {
 
       <div className='flex flex-col flex-wrap items-center mb-2'>
         <div>
-           {avgRating === 0 ? 'No Rating Available' : <Rating count={avgRating}/>}
+           {avgRating === 0 ? 'No Rating Available' : <Rating count={avgRating} size={32}/>}
         </div>
         
         <div className='flex'>
@@ -50,7 +50,7 @@ export default async function CoursePage({params}: {
             </p>
           </div>
           <div className='flex p-1'>
-            <BsFillClockFill size={24}/> 
+            <BsFillClockFill size={20}/> 
             <p className='text-lg ml-1'>{ `${course?.data?.duration} minutes` }</p>
           </div>
         </div>
@@ -68,7 +68,7 @@ export default async function CoursePage({params}: {
             comments.length > 0 ? (
               comments.map((comment: any) => (
                 <li className='m-2 bg-white max-w-xl rounded-2xl px-10 py-8 shadow-lg hover:shadow-2xl transition duration-500' key={comment?.id}>
-                  <p className="flex mt-2"> Rated {comment?.rating}</p>
+                  <Rating count={comment?.rating} size={24}/>
 
                   <div className="mt-4 text-md text-gray-600">{comment?.data?.json && <RichTextRenderer node={comment?.data?.json} />}</div>
 

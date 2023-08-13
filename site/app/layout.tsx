@@ -10,7 +10,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Coursery",
-  description: "Get all the courses bt tapaScript",
+  description: "Get all the courses by tapaScript",
 };
 
 export default function RootLayout({

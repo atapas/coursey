@@ -2,8 +2,8 @@
 
 import { BsStarFill } from 'react-icons/bs';
 
-function Rating({count} : {count: number}) {
-  const stars = Array(count).fill(<BsStarFill color={"teal"} size={32}/>);
+function Rating({count, size} : {count: number, size: number}) {
+  const stars = Array(count).fill(<BsStarFill color={"teal"} size={size}/>);
   return(
     <div className='flex mb-2'>
       {
