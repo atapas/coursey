@@ -18,7 +18,7 @@ export default async function Home() {
             <Link
               key={course?.node?.id}
               href={`/${course?.node?.slug}`}
-              className='md:flex md:flex-col md:mr-8 w-full md:w-[calc(50%-1rem)] lg:w-[calc(25%-1rem)] even:mr-0 lg:even:mr-8 mb-8 h-auto border-solid border-2 border-gray-300 rounded'>
+              className='md:flex md:flex-col md:mr-8 w-full md:w-[calc(50%-1rem)] lg:w-[calc(23.7%-1rem)] even:mr-0 lg:even:mr-8 mb-8 h-auto border-solid border-2 border-gray-300 rounded'>
                 <div>
                   <FeaturePrice price={course?.node?.price}/>
                   <Image
