@@ -35,8 +35,13 @@ The project uses the following technology stack:
 - [Vercel](https://vercel.com/) to deploy the app publicly.
 
 ## 🏗️ How to Build an App like Coursey?
+Here is an in-depth video to learn how to build an app like this.
 
-TBA
+<p align="center">
+  <a href="https://www.youtube.com/watch?v=ZEiudFe5NSA">
+   <img src="https://res.cloudinary.com/atapas/image/upload/v1692877417/demos/Thumbnail_wdtd7l.png" alt="thumbnail" />
+  </a>  
+</p>
 
 ## 🤝 Want to Contribute?
 
