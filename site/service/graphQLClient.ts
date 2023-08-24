@@ -2,7 +2,7 @@ import { gql, GraphQLClient } from "graphql-request";
 
 export const getClient = (preview: boolean): GraphQLClient => {
   const headers: any = {
-    "x-caisy-apikey": process.env.CAISEY_API_KEY!,
+    "x-caisy-apikey": process.env.CAISY_API_KEY!,
   }; 
   if (preview) {
     headers["x-caisy-preview"] = "true";
