@@ -1,6 +1,6 @@
 # Coursey
 
-Coursey is a project to show powerful integration between Caisy, Next.js App router, and GaphQL.
+Coursey is a project to show powerful integration between [Caisy Headless CMS](https://app.caisy.io/app/signup/mwiyyiglk2er), Next.js App router, and GaphQL.
 
 ## How to Set up
 
