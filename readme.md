@@ -26,6 +26,14 @@ The application is deployed on Vercel, and you can start playing around with it.
 
 > [Demo Application Deployed](https://coursery.vercel.app/)
 
+# 🤲 Want to Motivate?
+
+Who doesn't need motivation? Please give the project a star(⭐) and/or share it in your dev circle.
+
+## Many Thanks to all the `Stargazers` who have supported this project with stars(⭐)
+
+[![Stargazers repo roster for @atapas/coursey](https://reporoster.com/stars/atapas/coursey)](https://github.com/atapas/coursey/stargazers)
+
 ## 🍔 Tech Stack
 The project uses the following technology stack:
 - [Caisy Headless CMS](https://app.caisy.io/app/signup/mwiyyiglk2er) as a back-end data store.
