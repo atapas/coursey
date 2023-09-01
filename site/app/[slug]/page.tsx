@@ -12,10 +12,10 @@ import Link from 'next/link';
 
 
 export default async function CoursePage({params}: {
-  params: {id: string}
+  params: {slug: string}
 }) {
   
-  const course: any  = await getCourse(params?.id);
+  const course: any  = await getCourse(params?.slug);
   const comments: any = course?.data?.comments;
 
   const cummulativeRating = comments.reduce((accumulator: number, comment: any) => accumulator + comment.rating, 0);
