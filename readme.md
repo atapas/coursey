@@ -51,6 +51,8 @@ Here is an in-depth video to learn how to build an app like this.
   </a>  
 </p>
 
+> Here is a  step-by-step tutorial for you: [https://blog.greenroots.info/create-an-e-learning-platform-using-caisy-graphql-nextjs-app-router](https://blog.greenroots.info/create-an-e-learning-platform-using-caisy-graphql-nextjs-app-router)
+
 ## 🤝 Want to Contribute?
 
 This project is an Open Source project. If you'd like to contribute, you are welcome. Feel free to start with these features and issues:
